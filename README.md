@@ -1,23 +1,24 @@
 # gemini_cli_test
 
-Gemini CLI 테스트를 위한 간단한 Python 프로젝트입니다.
+A simple Python project for testing the Gemini CLI.
 
-## 프로젝트 구성
+## Project Structure
 
-이 리포지토리는 다음과 같은 파일들로 구성되어 있습니다:
+This repository consists of the following files:
 
-- **`count.py`**: 1부터 10까지 숫자를 출력하는 간단한 Python 스크립트입니다.
-- **`LICENSE`**: Apache License 2.0 라이선스 파일입니다.
-- **`.gitignore`**: Git 관리에서 제외할 파일 패턴을 정의하는 파일입니다.
+- **`count.py`**: A simple Python script that prints numbers from 1 to 10.
+- **`LICENSE`**: The Apache License 2.0 license file.
+- **`.gitignore`**: Defines file patterns to be excluded from Git version control.
 
-## 실행 방법
+## How to Run
 
-이 프로젝트의 스크립트를 실행하려면 Python 3 환경이 필요합니다. 터미널에서 다음 명령어를 실행하십시오:
+To run the script in this project, you need a Python 3 environment. Run the following command in your terminal:
 
 ```bash
 python count.py
 ```
 
-## 라이선스
+## License
 
-이 프로젝트는 **Apache License 2.0** 라이선스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참고하시기 바랍니다.
+This project is licensed under the **Apache License 2.0**. For details, please refer to the `LICENSE` file.
+
