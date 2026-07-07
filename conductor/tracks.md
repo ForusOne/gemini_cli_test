@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Build MCP Summation Server with SSE and Local client application**
+- [~] **Track: Build MCP Summation Server with SSE and Local client application**
   *Link: [./tracks/mcp_summation_server_20260707/](./tracks/mcp_summation_server_20260707/)*
