@@ -33,8 +33,8 @@ def calculate_sum(low: int, high: int) -> dict:
     }
 
 # 3. Setup SSE Transport
-# Note: FastAPI/Starlette handles trailing slash routing beautifully.
-sse = SseServerTransport("/messages")
+# Note: FastAPI/Starlette handles trailing slash routing beautifully when using /messages/.
+sse = SseServerTransport("/messages/")
 
 async def handle_sse(request: Request):
     async with sse.connect_sse(
