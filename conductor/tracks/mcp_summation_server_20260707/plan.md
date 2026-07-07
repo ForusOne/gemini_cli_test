@@ -38,12 +38,12 @@ This plan defines the step-by-step implementation for the MCP Summation Server f
 
 ## Phase 4: Local Client Application
 
-- [ ] Task: Implement Local client.py CLI tool
-    - [ ] Write integration tests in `tests/test_client.py` mocking the FastAPI/SSE server and testing client command-line arguments.
-    - [ ] Confirm tests fail (Red Phase).
-    - [ ] Create `client.py` supporting command-line inputs (`--low` and `--high`) to dispatch summation requests via SSE HTTP client requests (Green Phase).
-    - [ ] Run end-to-end local integration test with server and client.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Local Client Application' (Protocol in workflow.md)
+- [x] Task: Implement Local client.py CLI tool [8eea98a]
+    - [x] Write integration tests in `tests/test_client.py` mocking the FastAPI/SSE server and testing client command-line arguments.
+    - [x] Confirm tests fail (Red Phase).
+    - [x] Create `client.py` supporting command-line inputs (`--low` and `--high`) to dispatch summation requests via SSE HTTP client requests (Green Phase).
+    - [x] Run end-to-end local integration test with server and client.
+- [~] Task: Conductor - User Manual Verification 'Phase 4: Local Client Application' (Protocol in workflow.md)
 
 ---
 
