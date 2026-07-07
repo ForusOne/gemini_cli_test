@@ -27,8 +27,8 @@ This plan defines the step-by-step implementation for the MCP Summation Server f
 
 ## Phase 3: MCP Server and SSE Transport
 
-- [ ] Task: Implement MCP Server with SSE transport
-    - [ ] Write integration tests in `tests/test_server.py` verifying FastAPI startup, health checks, and SSE route behaviors.
+- [~] Task: Implement MCP Server with SSE transport
+    - [~] Write integration tests in `tests/test_server.py` verifying FastAPI startup, health checks, and SSE route behaviors.
     - [ ] Confirm tests fail (Red Phase).
     - [ ] Create `server.py` using official `mcp` SDK's FastAPI server, exposing the `calculate_sum` tool with SSE transport (Green Phase).
     - [ ] Verify integration tests pass and test coverage for `server.py` meets the >80% threshold.
