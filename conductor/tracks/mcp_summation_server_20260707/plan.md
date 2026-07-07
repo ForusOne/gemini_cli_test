@@ -17,9 +17,9 @@ This plan defines the step-by-step implementation for the MCP Summation Server f
 ## Phase 2: Core Summation Logic and Unit Tests
 
 - [~] Task: Implement range summation logic with analytical optimization
-    - [~] Write comprehensive unit tests in `tests/test_summation.py` defining expected behavior for range summation (including positive/negative bounds, `low > high` swap warning, and huge ranges).
-    - [ ] Confirm tests fail (Red Phase).
-    - [ ] Create `summation.py` and implement summation logic to pass all tests, including $O(1)$ analytical formula optimization (Green Phase).
+    - [x] Write comprehensive unit tests in `tests/test_summation.py` defining expected behavior for range summation (including positive/negative bounds, `low > high` swap warning, and huge ranges).
+    - [x] Confirm tests fail (Red Phase).
+    - [~] Create `summation.py` and implement summation logic to pass all tests, including $O(1)$ analytical formula optimization (Green Phase).
     - [ ] Verify test coverage for `summation.py` is 100%.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Core Summation Logic and Unit Tests' (Protocol in workflow.md)
 
