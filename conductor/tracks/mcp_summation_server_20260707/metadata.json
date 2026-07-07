@@ -1,0 +1,8 @@
+{
+  "track_id": "mcp_summation_server_20260707",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-07-07T17:03:00Z",
+  "updated_at": "2026-07-07T17:03:00Z",
+  "description": "Build MCP Summation Server with SSE and Local client application"
+}
