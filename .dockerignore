@@ -1,0 +1,13 @@
+.venv/
+.git/
+.gitignore
+.dockerignore
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.coverage
+htmlcov/
+conductor/
+*.md
