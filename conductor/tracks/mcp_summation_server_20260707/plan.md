@@ -4,7 +4,7 @@ This plan defines the step-by-step implementation for the MCP Summation Server f
 
 ---
 
-## Phase 1: Project Setup and Test Framework
+## Phase 1: Project Setup and Test Framework [checkpoint: db7b5ea]
 
 - [x] Task: Set up dependencies and test environment
     - [x] Create `requirements.txt` containing `fastapi`, `uvicorn`, `mcp`, `httpx`, `pytest`, `pytest-cov`, `pytest-asyncio`.
