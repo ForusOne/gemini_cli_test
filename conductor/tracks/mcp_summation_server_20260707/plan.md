@@ -6,11 +6,11 @@ This plan defines the step-by-step implementation for the MCP Summation Server f
 
 ## Phase 1: Project Setup and Test Framework
 
-- [~] Task: Set up dependencies and test environment
-    - [~] Create `requirements.txt` containing `fastapi`, `uvicorn`, `mcp`, `httpx`, `pytest`, `pytest-cov`, `pytest-asyncio`.
-    - [ ] Install dependencies locally and configure pytest.
-    - [ ] Write a simple sanity test in `tests/test_sanity.py` to verify the testing framework works.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Setup and Test Framework' (Protocol in workflow.md)
+- [x] Task: Set up dependencies and test environment
+    - [x] Create `requirements.txt` containing `fastapi`, `uvicorn`, `mcp`, `httpx`, `pytest`, `pytest-cov`, `pytest-asyncio`.
+    - [x] Install dependencies locally and configure pytest.
+    - [x] Write a simple sanity test in `tests/test_sanity.py` to verify the testing framework works.
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Setup and Test Framework' (Protocol in workflow.md)
 
 ---
 
