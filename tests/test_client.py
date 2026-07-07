@@ -15,8 +15,11 @@ async def test_run_client_success():
     mock_session.initialize = AsyncMock()
     
     mock_response = MagicMock()
-    mock_response.text = '{"low": 1, "high": 10, "sum": 55, "message": "Success"}'
-    mock_session.call_tool = AsyncMock(return_value=[mock_response])
+    mock_response.isError = False
+    mock_content_block = MagicMock()
+    mock_content_block.text = '{"low": 1, "high": 10, "sum": 55, "message": "Success"}'
+    mock_response.content = [mock_content_block]
+    mock_session.call_tool = AsyncMock(return_value=mock_response)
     
     with patch("client.sse_client") as mock_sse_client, \
          patch("client.ClientSession") as mock_client_session:

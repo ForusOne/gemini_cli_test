@@ -33,12 +33,18 @@ async def run_client(url: str, low: int, high: int):
             # 4. Invoke the calculate_sum tool
             response = await session.call_tool("calculate_sum", {"low": low, "high": high})
             
-            if not response or len(response) == 0:
+            if response.isError:
+                print("Error: MCP Server returned an error.", file=sys.stderr)
+                if response.content:
+                    print(response.content[0].text, file=sys.stderr)
+                sys.exit(1)
+                
+            if not response.content:
                 print("Error: Received empty response from MCP Server.", file=sys.stderr)
                 sys.exit(1)
             
             # Parse response
-            response_text = response[0].text
+            response_text = response.content[0].text
             try:
                 data = json.loads(response_text)
                 
