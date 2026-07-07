@@ -216,3 +216,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Google Cloud Platform & GCP Secrets / Credentials
+*service-account*.json
+gcp-key.json
+key.json
+credentials.json
+.gcloud/
+client_secret*.json
+
+# Security keys & certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.der
+
+# Local development / agentic workflows
+.agents/
+conductor/
+.gemini/
