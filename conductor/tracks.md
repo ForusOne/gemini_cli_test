@@ -9,5 +9,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Add a shell to deploy the source code to cloud run**
+- [x] **Track: Add a shell to deploy the source code to cloud run**
   *Link: [./tracks/deploy_script_20260708/](./tracks/deploy_script_20260708/)*
