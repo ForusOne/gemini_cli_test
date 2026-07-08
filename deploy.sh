@@ -81,3 +81,32 @@ else
 fi
 
 echo "✓ GCP environment verified successfully."
+
+echo ""
+echo "=== Step 1: Submit Build to Google Cloud Build ==="
+IMAGE_TAG="gcr.io/${PROJECT_ID}/${SERVICE_NAME}:latest"
+echo "Submitting build to Cloud Build: ${IMAGE_TAG}"
+gcloud builds submit --tag "${IMAGE_TAG}" .
+
+echo ""
+echo "=== Step 2: Deploy to Google Cloud Run ==="
+echo "Deploying to service: ${SERVICE_NAME} in region: ${REGION}"
+gcloud run deploy "${SERVICE_NAME}" \
+  --image "${IMAGE_TAG}" \
+  --region "${REGION}" \
+  --platform managed \
+  --allow-unauthenticated
+
+# Retrieve and print the service URL
+SERVICE_URL=$(gcloud run services describe "${SERVICE_NAME}" --region "${REGION}" --format="value(status.url)" 2>/dev/null)
+
+echo ""
+echo "=================================================="
+echo "         DEPLOYMENT COMPLETED SUCCESSFULLY"
+echo "=================================================="
+echo "  Service Name: ${SERVICE_NAME}"
+echo "  Region:       ${REGION}"
+echo "  Project ID:   ${PROJECT_ID}"
+echo "  Service URL:  ${SERVICE_URL}"
+echo "  Health Check: ${SERVICE_URL}/health"
+echo "=================================================="
