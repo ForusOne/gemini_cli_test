@@ -6,4 +6,4 @@
 ## Phase 2: Implementation & Green Phase
 - [x] Task: Implement CLI argument parsing, help output, and verification logic (gcloud configuration checks) in `deploy.sh` so tests pass. (f8151af)
 - [x] Task: Implement core Cloud Build and Cloud Run deployment commands inside `deploy.sh` with error checking and parameter overrides. (ba271a7)
-- [ ] Task: Conductor - User Manual Verification 'Cloud Run Deployment Script Track' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Cloud Run Deployment Script Track' (Protocol in workflow.md) (d4baadc)
