@@ -75,6 +75,29 @@ PYTHONPATH=. .venv/bin/pytest --cov=. tests/
 ```
 The server will boot locally and serve traffic on `http://localhost:8080`.
 
+### 5. Deploy to Google Cloud Run (Automated)
+We provide an automated, production-grade deployment script `deploy.sh` that validates your GCP configurations, builds the container image using Google Cloud Build, and deploys it to Cloud Run.
+
+To run the deployment:
+```bash
+# Ensure execution permissions
+chmod +x deploy.sh
+
+# Deploy with default configurations
+./deploy.sh
+```
+
+**Override Defaults with CLI Parameters:**
+```bash
+./deploy.sh -s custom-service-name -r asia-northeast3 -p ai-hangsik
+```
+
+**Available Options:**
+* `-h, --help` : Show help message and exit.
+* `-s, --service NAME` : Set Cloud Run service name (default: `mcp-summation-server`).
+* `-r, --region REGION` : Set target GCP region (default: `asia-northeast3`).
+* `-p, --project ID` : Set target GCP Project ID (default: `ai-hangsik`).
+
 ---
 
 ## 🛰️ Verification & End-to-End Examples
