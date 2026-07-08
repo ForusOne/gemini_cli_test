@@ -235,5 +235,4 @@ client_secret*.json
 
 # Local development / agentic workflows
 .agents/
-conductor/
 .gemini/

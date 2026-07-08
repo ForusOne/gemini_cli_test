@@ -1,0 +1,56 @@
+# Implementation Plan - Build MCP Summation Server with SSE and Local client application
+
+This plan defines the step-by-step implementation for the MCP Summation Server following the Test-Driven Development (TDD) workflow.
+
+---
+
+## Phase 1: Project Setup and Test Framework [checkpoint: db7b5ea]
+
+- [x] Task: Set up dependencies and test environment
+    - [x] Create `requirements.txt` containing `fastapi`, `uvicorn`, `mcp`, `httpx`, `pytest`, `pytest-cov`, `pytest-asyncio`.
+    - [x] Install dependencies locally and configure pytest.
+    - [x] Write a simple sanity test in `tests/test_sanity.py` to verify the testing framework works.
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Setup and Test Framework' (Protocol in workflow.md)
+
+---
+
+## Phase 2: Core Summation Logic and Unit Tests [checkpoint: 83fa345]
+
+- [x] Task: Implement range summation logic with analytical optimization
+    - [x] Write comprehensive unit tests in `tests/test_summation.py` defining expected behavior for range summation (including positive/negative bounds, `low > high` swap warning, and huge ranges).
+    - [x] Confirm tests fail (Red Phase).
+    - [x] Create `summation.py` and implement summation logic to pass all tests, including $O(1)$ analytical formula optimization (Green Phase).
+    - [x] Verify test coverage for `summation.py` is 100%.
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Core Summation Logic and Unit Tests' (Protocol in workflow.md)
+
+---
+
+## Phase 3: MCP Server and SSE Transport [checkpoint: e540c6c]
+
+- [x] Task: Implement MCP Server with SSE transport [34eb3d2]
+    - [x] Write integration tests in `tests/test_server.py` verifying FastAPI startup, health checks, and SSE route behaviors.
+    - [x] Confirm tests fail (Red Phase).
+    - [x] Create `server.py` using official `mcp` SDK's FastAPI server, exposing the `calculate_sum` tool with SSE transport (Green Phase).
+    - [x] Verify integration tests pass and test coverage for `server.py` meets the >80% threshold.
+- [x] Task: Conductor - User Manual Verification 'Phase 3: MCP Server and SSE Transport' [e540c6c]
+
+---
+
+## Phase 4: Local Client Application [checkpoint: 203ebf0]
+
+- [x] Task: Implement Local client.py CLI tool [8eea98a]
+    - [x] Write integration tests in `tests/test_client.py` mocking the FastAPI/SSE server and testing client command-line arguments.
+    - [x] Confirm tests fail (Red Phase).
+    - [x] Create `client.py` supporting command-line inputs (`--low` and `--high`) to dispatch summation requests via SSE HTTP client requests (Green Phase).
+    - [x] Run end-to-end local integration test with server and client.
+- [x] Task: Conductor - User Manual Verification 'Phase 4: Local Client Application' [203ebf0]
+
+---
+
+## Phase 5: Dockerization and Deployment Configuration [checkpoint: px9_cloud]
+
+- [x] Task: Dockerize the application and set up non-root user [d145a68]
+    - [x] Create `Dockerfile` with multi-stage build or python-slim, configuring `appuser` as non-root runtime executor.
+    - [x] Build the docker image locally and verify container startup (completed via Google Cloud Build).
+    - [x] Run the test suite within the Docker container to ensure standard environment consistency.
+- [x] Task: Conductor - User Manual Verification 'Phase 5: Dockerization and Deployment Configuration' [px9_cloud]

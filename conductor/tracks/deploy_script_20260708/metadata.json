@@ -1,0 +1,8 @@
+{
+  "track_id": "deploy_script_20260708",
+  "type": "chore",
+  "status": "new",
+  "created_at": "2026-07-08T10:13:00Z",
+  "updated_at": "2026-07-08T10:13:00Z",
+  "description": "add a shell to deploy the source code to cloud run"
+}
